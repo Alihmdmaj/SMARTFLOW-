@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartFlow+ | AI Traffic Management</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app-wrapper">
+        <header class="search-header">
+            <div class="brand">SMARTFLOW+</div>
+            <input type="text" id="destination-search" class="search-bar" placeholder="Search for destinations (e.g. Airport, Central Park)...">
+        </header>
+
+        <div class="main-container">
+            <aside id="parking-panel">
+                <h2>Parking Insights</h2>
+                <p class="subtitle">IoT Sensor Data: Real-time</p>
+                <hr>
+                <div id="parking-list">
+                    <p class="placeholder-text">Click "Nearby Parking" to scan the area...</p>
+                </div>
+            </aside>
+
+            <main id="map">
+                <div class="map-actions">
+                    <button class="btn btn-route" onclick="calculateBestRoute()">Find Best Route</button>
+                    <button class="btn btn-park" onclick="showParking()">Nearby Parking</button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
